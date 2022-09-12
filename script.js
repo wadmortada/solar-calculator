@@ -33,4 +33,7 @@ let chargeController200 = neededPanel200 * panel200Isc ;
    document.getElementById('150A').innerHTML =  `${Math.round(neededBattery150)} بطارية`;
    document.getElementById('chargeAmp100').innerHTML =  `${Math.round(chargeController100)} امبير` ;
    document.getElementById('chargeAmp200').innerHTML =  `${Math.round(chargeController200)} امبير` ;
+    setTimeout( () => {
+        document.getElementById('dailyWatt').value = '';
+    }, 2000);
 })
