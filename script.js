@@ -1,7 +1,12 @@
-// Totall wanted Watt Daily
+
+
+let submit = document.querySelector('button') ;
+submit.addEventListener('click', e => {
+    e.preventDefault();
+    // Totall wanted Watt Daily
 let loseFactor = 1.3 ;
-let dailyWatt = document.getElementById('dailly_watt').value ;
-let totallWantedWatt = dailyWatt * loseFactor ;
+let dailyWatt = document.getElementById('dailyWatt').value ;
+let totallWantedWatt = dailyWatt * loseFactor;
 // Watt From Panel
 let sunLight = 5 ;
 let wattFromPanel = totallWantedWatt / sunLight ;
@@ -19,14 +24,9 @@ let panel100Isc = 4.21 ;
 let panel200Isc = 8.85 ; 
 let chargeController100 = neededPanel100 * panel100Isc ;
 let chargeController200 = neededPanel200 * panel200Isc ;
-
-let submit = document.querySelector('button') ;
-submit.addEventListener('click', e => {
-    e.preventDefault() ;
-    console.log('whats happening')
-    let addSection = document.getElementById('requireds') ; 
-    addSection.innerHTML += `<div class="text-center"><p>cdewcedw</p><div>
-    <div class="text-center"><p>cdewcedw</p><div>
-    `
-    
+    console.log('whats happening');
+    console.log(totallWantedWatt);
+   document.getElementById('wattNeeded').innerHTML = totallWantedWatt ;
+   document.getElementById('100W').innerHTML = neededPanel100 ;
+   document.getElementById('200W').innerHTML = neededPanel200 ;
 })
