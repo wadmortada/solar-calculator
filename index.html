@@ -13,16 +13,27 @@
         <div class="container">
             <div id="solarDiv" class="text-center mt-3 mb-3 p-3 border border-3 rounded bg-info">
                 <div class="mb-2">
-                    <label for="dailly_watt">قيمة الاستهلاك اليومي بالواط ساعة</label>
+                    <label for="dailyWatt">قيمة الاستهلاك اليومي بالواط ساعة</label>
                 </div>
                 <div class="mb-3">
-                    <input type="number" name="dailly_watt" id="dailly_watt" min="300" max="10000" class="rounded text-center" required>
+                    <input type="number" name="dailyWatt" id="dailyWatt" min="300" max="10000" class="rounded text-center" required>
                 </div>
                 <button type="submit" class="btn btn-primary">احسب</button>
             </div>
-            <div class="border border-3 rounded bg-info">
-                <h1 class="text-center mt-2 mb-3">المكونات المطلوبة للمنظومة</h1>
-                <section id="requireds"></section>
+            <div class=" border border-3 rounded bg-info">
+                <h1 class="text-center mt-2 ">المكونات المطلوبة للمنظومة</h1>
+                <section id="requireds" class="p-3">
+                    <h5>المطلوب بالواط + الفقد الكلي : </h5>
+                    <span id="wattNeeded"></span>
+                    <h5> عدد الالواح :</h5>
+                    <p>سعة 100 واط : <span id="100W"></span></p>
+                    <p>سعة 200 واط : <span id="200W"></span></p>
+                    <h5>عدد البطاريات :</h5>
+                    <p>سعة 100 امبير : <span id="100A"></span></p>
+                    <p> سعة 150 امبير : <span id="150A"></span></p>
+                    <h5>منظم الشحن</h5>
+                    <span id="chargeAmp"></span>
+                </section>
             </div>
         </div>
     </main>
