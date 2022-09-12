@@ -1,7 +1,7 @@
 
 
-let submit = document.querySelector('button') ;
-submit.addEventListener('click', e => {
+let submit = document.getElementById('solarForm') ;
+submit.addEventListener('submit', e => {
     e.preventDefault();
     // Totall wanted Watt Daily
 let loseFactor = 1.3 ;
@@ -26,7 +26,11 @@ let chargeController100 = neededPanel100 * panel100Isc ;
 let chargeController200 = neededPanel200 * panel200Isc ;
     console.log('whats happening');
     console.log(totallWantedWatt);
-   document.getElementById('wattNeeded').innerHTML = totallWantedWatt ;
-   document.getElementById('100W').innerHTML = neededPanel100 ;
-   document.getElementById('200W').innerHTML = neededPanel200 ;
+   document.getElementById('wattNeeded').innerHTML = `${Math.round(totallWantedWatt)} واط في اليوم` ;
+   document.getElementById('100W').innerHTML = `${Math.round(neededPanel100)} لوح` ;
+   document.getElementById('200W').innerHTML =  `${Math.round(neededPanel200)} لوح` ;
+   document.getElementById('100A').innerHTML =  `${Math.round(neededBattery100)} بطاربة`;
+   document.getElementById('150A').innerHTML =  `${Math.round(neededBattery150)} بطارية`;
+   document.getElementById('chargeAmp100').innerHTML =  `${Math.round(chargeController100)} امبير` ;
+   document.getElementById('chargeAmp200').innerHTML =  `${Math.round(chargeController200)} امبير` ;
 })
