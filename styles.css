@@ -1,5 +1,9 @@
-body {
-  
+
+.header, .footer{
+    background-color: aqua;
+    text-align: center;
+    padding: 2%;
+    border-radius: 7px;
 }
 
 input:focus:invalid {
