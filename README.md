@@ -1,2 +1,2 @@
-# solar-sum
-simple and dynamic user interface to caculate solar sytem requirment
+# solar-calculator
+simple and dynamic user interface to caculate solar system requirments
